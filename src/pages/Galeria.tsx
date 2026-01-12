@@ -1,13 +1,11 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { 
   Images,
   PlayCircle,
-  Hourglass,
   AlertCircle,
   Search,
   Filter,
@@ -20,7 +18,6 @@ import {
   X,
   ChevronLeft,
   ChevronRight,
-  Maximize2,
   Play
 } from 'lucide-react';
 import { db } from '@/lib/firebase';

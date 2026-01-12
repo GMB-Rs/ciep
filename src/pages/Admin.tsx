@@ -23,7 +23,6 @@ import {
   Image as ImageIcon,
   Eye,
   ExternalLink,
-  Upload,
   User,
   Clock,
   MapPin,
@@ -39,7 +38,6 @@ import { auth, db } from '@/lib/firebase';
 import { 
   collection, 
   addDoc, 
-  updateDoc, 
   deleteDoc, 
   doc, 
   getDocs, 
@@ -86,7 +84,6 @@ interface Formando {
 const Admin: React.FC = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState<FirebaseUser | null>(null);
-  const [loading, setLoading] = useState(true);
   const [loginLoading, setLoginLoading] = useState(false);
   const [activeTab, setActiveTab] = useState('home');
   const [saving, setSaving] = useState(false);
@@ -129,7 +126,6 @@ const Admin: React.FC = () => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
-      setLoading(false);
       if (user) {
         loadData();
       }

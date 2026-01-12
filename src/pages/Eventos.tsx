@@ -3,13 +3,10 @@ import {
   Calendar, 
   Clock, 
   MapPin, 
-  CheckCircle, 
-  Hourglass, 
   AlertCircle, 
   Image as ImageIcon,
   ChevronDown,
   ChevronUp,
-  ExternalLink
 } from 'lucide-react';
 import { 
   Select,
