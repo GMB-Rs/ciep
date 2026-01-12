@@ -5,8 +5,11 @@ import { defineConfig } from "vite"
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/ciep/",
+  base: "/",
   plugins: [react(), tailwindcss()],
+  build: {
+    assetsDir: "assets-" + Date.now(),
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

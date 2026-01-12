@@ -40,15 +40,25 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <header className="sticky top-0 z-50 bg-white border-b border-yellow-400 shadow-sm">
         <div className="container mx-auto px-4">
           <div className="flex h-20 items-center justify-between">
-            {/* Logo e Identidade */}
-            <div className="flex items-center gap-3">
-              <Link to="/" className="flex items-center gap-3 no-underline">
-                <div className="hidden sm:block">
-                  <h1 className="text-3xl font-bold text-gray-900 leading-tight -mb-2">CIEP</h1>
-                  <p className="text-lg text-gray-600 font-medium">Centro Integrado de Educação Pública</p>
-                </div>
-              </Link>
-            </div>
+            {/* Logo e Identidade - AGORA VISÍVEL EM TODOS OS DISPOSITIVOS */}
+            <div className="flex items-center gap-3 px-2">
+  <Link
+    to="/"
+    className="flex flex-col sm:flex-row items-center sm:items-start gap-1 sm:gap-3 no-underline sm:text-left"
+  >
+    {/* TEXTO "CIEP" VISÍVEL SEMPRE */}
+    <div>
+      <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">
+        CIEP
+      </h1>
+
+      <p className="text-sm sm:text-lg text-gray-600 font-medium leading-tight">
+        Centro Integrado de Educação Pública
+      </p>
+    </div>
+  </Link>
+</div>
+
 
             {/* Navegação Desktop */}
             <nav className="hidden md:flex items-center gap-2">
@@ -147,12 +157,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <footer className="bg-blue-900 border-t border-yellow-400/30 mt-16">
         <div className="container mx-auto px-4 py-12">
           <div className="flex flex-col items-center text-center">
-            {/* Logo Footer - Versão simplificada */}
-            <div className="mb-8 flex flex-col items-center">
-              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full mb-4">
-                <span className="text-white text-3xl font-bold">P</span>
-              </div>
-              <h2 className="text-xl font-bold text-white mb-2 tracking-wider">
+            {/* Logo Footer */}
+            <div className="mb-8 text-white">
+              <h2 className="text-xl font-bold mb-2 tracking-wider">
                 E.E.E.M. Dr. Luiz Maria Ferraz - CIEP
               </h2>
               <p className="text-gray-300 text-sm">Centro Integrado de Educação Pública</p>
